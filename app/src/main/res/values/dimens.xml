@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="name_bank">20sp</dimen>
+    <dimen name="size_progress_bar">50dp</dimen>
+    <dimen name="sizeHeaderDataBuySell">12sp</dimen>
+    <dimen name="paddingItemHeader">35dp</dimen>
+    <dimen name="paddingLeftCurrency">10dp</dimen>
+    <dimen name="paddingRightCurrency">10dp</dimen>
+    <dimen name="paddingTopCurrency">5dp</dimen>
+    <dimen name="paddingBottomCurrency">5dp</dimen>
+</resources>

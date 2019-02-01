@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ProgressBar
+                    android:id="@+id/pb_belarusbank"
+                    android:layout_width="@dimen/size_progress_bar"
+                    android:layout_height="@dimen/size_progress_bar"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Беларусбанк"
+                                android:fontFamily="monospace"
+                                android:textSize="@dimen/name_bank" />
+                                -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleX=".5"
+                    android:scaleY=".5"
+                    android:src="@mipmap/belarusbanklogo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_belarusbank_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingItemHeader"
+                        android:text="@string/buy"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingItemHeader"
+                        android:text="@string/sell"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_rub" />
+
+                    <TextView
+                        android:id="@+id/tv_rus_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_rus_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_usd" />
+
+                    <TextView
+                        android:id="@+id/tv_usd_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_usd_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_euro" />
+
+                    <TextView
+                        android:id="@+id/tv_euro_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_euro_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ProgressBar
+                    android:id="@+id/pb_belapb"
+                    android:layout_width="@dimen/size_progress_bar"
+                    android:layout_height="@dimen/size_progress_bar"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="Белагропромбанк"
+                                android:fontFamily="monospace"
+                                android:textSize="@dimen/name_bank" />
+                                -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:src="@mipmap/logo_belapb" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_belabp_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingItemHeader"
+                        android:text="@string/buy"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingItemHeader"
+                        android:text="@string/sell"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_rub" />
+
+                    <TextView
+                        android:id="@+id/tv_rus_rate_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_rus_rate_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_usd" />
+
+                    <TextView
+                        android:id="@+id/tv_usd_rate_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_usd_rate_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_euro" />
+
+                    <TextView
+                        android:id="@+id/tv_euro_rate_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_euro_rate_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ProgressBar
+                    android:id="@+id/pb_belveb"
+                    android:layout_width="@dimen/size_progress_bar"
+                    android:layout_height="@dimen/size_progress_bar"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="БелВЭБ"
+                                android:fontFamily="monospace"
+                                android:textSize="@dimen/name_bank" />
+                                -->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:src="@mipmap/belveb_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_belveb_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingItemHeader"
+                        android:text="@string/buy"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/paddingItemHeader"
+                        android:text="@string/sell"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_rub" />
+
+                    <TextView
+                        android:id="@+id/tv_rus_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_rus_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_usd" />
+
+                    <TextView
+                        android:id="@+id/tv_usd_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_usd_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/currency_euro" />
+
+                    <TextView
+                        android:id="@+id/tv_euro_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                    <TextView
+                        android:id="@+id/tv_euro_sell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:text="0.0000" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

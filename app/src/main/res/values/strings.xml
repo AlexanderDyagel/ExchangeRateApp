@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExchangeRateApp</string>
+    <string name="buy">Покупка</string>
+    <string name="sell">Продажа</string>
+</resources>

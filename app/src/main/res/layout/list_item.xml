@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="@dimen/size_progress_bar"
+            android:layout_height="@dimen/size_progress_bar"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:id="@+id/iv_logo_bank"
+            android:src="@mipmap/belarusbanklogo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddingLeftCurrency"
+            android:paddingRight="@dimen/paddingRightCurrency"
+            android:paddingTop="@dimen/paddingTopCurrency"
+            android:paddingBottom="@dimen/paddingBottomCurrency">
+
+            <TextView
+                android:id="@+id/tv_current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/paddingItemHeader"
+                android:text="@string/buy"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/paddingItemHeader"
+                android:text="@string/sell"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/sizeHeaderDataBuySell" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddingLeftCurrency"
+            android:paddingRight="@dimen/paddingRightCurrency"
+            android:paddingTop="@dimen/paddingTopCurrency"
+            android:paddingBottom="@dimen/paddingBottomCurrency">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/currency_rub" />
+
+            <TextView
+                android:id="@+id/tv_rus_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="0.0000" />
+
+            <TextView
+                android:id="@+id/tv_rus_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="0.0000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddingLeftCurrency"
+            android:paddingRight="@dimen/paddingRightCurrency"
+            android:paddingTop="@dimen/paddingTopCurrency"
+            android:paddingBottom="@dimen/paddingBottomCurrency">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/currency_usd" />
+
+            <TextView
+                android:id="@+id/tv_usd_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="0.0000" />
+
+            <TextView
+                android:id="@+id/tv_usd_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="0.0000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddingLeftCurrency"
+            android:paddingRight="@dimen/paddingRightCurrency"
+            android:paddingTop="@dimen/paddingTopCurrency"
+            android:paddingBottom="@dimen/paddingBottomCurrency">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/currency_euro" />
+
+            <TextView
+                android:id="@+id/tv_euro_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="0.0000" />
+
+            <TextView
+                android:id="@+id/tv_euro_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="0.0000" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
